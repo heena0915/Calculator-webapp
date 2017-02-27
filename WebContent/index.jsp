@@ -33,13 +33,8 @@
           <fieldset class="clearfix">
             <p><span class="fa fa-hand-o-right" style="font-size:36px;color:pink"></span><input type="number"  name="a" value="a"  required></p> 
             <p><span class="fa fa-calculator" style="font-size:36px;color:pink"></span>  <select name ="operation">
-																						  <option value="Add">Add</option>
-																						  <option value="Subtract">Subtract</option>
-																						  <option value="Multiply">Multiply</option>
-																						  <option value="Divide">Divide</option>
-																						</select></p> 
-			<p><span class="fa fa-hand-o-right" style="font-size:36px;color:pink"></span><input type="number"  name="b" value="b"  required></p> 
-			
+																				</select></p> 
+			<p><span class="fa fa-hand-o-right" style="font-size:36px;color:pink"></span><input type="number"  name="b" value="b"  required></p> 	
             <p><input type="submit" value="Calculate"></p>
           </fieldset>
          

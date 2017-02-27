@@ -24,45 +24,30 @@ import javax.servlet.http.HttpSession;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-	throws ServletException, IOException {
-		//HttpSession session = req.getSession(true);
+	throws ServletException, IOException 
+	{
+		// Create an object of BasicCalc class
 		
-		BasicCalc det=new BasicCalc();
-		double a= Double.valueOf(req.getParameter("a"));
-	    double b= Double.valueOf(req.getParameter("b"));
-		det.seta(a);
-		det.setb(b);
-		String operation= req.getParameter("operation");
-	System.out.println("cdf"+operation);
-		switch(operation)
-	    {
-	        case "Add" : 
-	        	  c=det.add();
-	        	  System.out.println("cdf12");
-	            break;
-	        case "Subtract": 
-	        	c=det.subtract();
-	           break;
-	        case "Multiply" :
-	        	c=det.multiply();
-	            break;
-	        case "Divide" : 
-	        	c=det.divide();
-	            break;
-	       
-	        default : System.out.print("Wrong Choice!!!");
-	            break;
-	    }
+		//get parameter with req.getparameter() method and 
 		
-		System.out.println("cdf" +c);
-			req.setAttribute("answer", c);
-
+		// set the values with set parameter into variable a, b
 		
+		// get parameter operation 
+		
+	//	switch (operation)		
+		{
+		//write switch cases for calling different method of operations
+		}
 		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 		rd.forward(req, resp); 
 		} 
-		
-		}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+	throws ServletException, IOException {
+	doGet(req, resp);
+	}
+}
 	
 
 
